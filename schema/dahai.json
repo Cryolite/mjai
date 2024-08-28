@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "type",
+    "actor",
+    "pai",
+    "tsumogiri"
+  ],
+  "properties": {
+    "type": {
+      "const": "dahai"
+    },
+    "actor": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "pai": {
+      "$ref": "https://raw.githubusercontent.com/Cryolite/mjai/main/schema/tile.json"
+    },
+    "tsumogiri": {
+      "type": "boolean"
+    }
+  }
+}
