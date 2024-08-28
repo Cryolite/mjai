@@ -20,11 +20,15 @@ Considering the above, the objective of this project is to standardize the mjai 
 
 ## In-game Mode and Replay Mode
 
-There are two aspects to the use of the mjai format. One is its use as a format for exchanging information during a game, and the other is its use as a format for recording the game (known as a game record or "牌譜"). The format used for exchanging information during a game allows only the information visible to a specific player to be seen, while other information remains hidden. Additionally, it serves the role of communicating the actions chosen by that player to a third party. The format used for recording the game (game record) makes all information visible. The former is called the "in-game mode" and the latter the "replay mode".
+There are two aspects to the use of the mjai format. One is its use as a format for exchanging information during a game, and the other is its use as a format for recording the game (known as a game record or "牌譜"). The format used for exchanging information during a game allows only the information visible to a specific player to be seen, while other information remains hidden. Additionally, it serves the role of communicating the actions chosen by that player to the game host. The format used for recording the game (game record) makes all information visible. The former is called the "in-game mode" and the latter the "replay mode".
 
 ## Directions
 
-In in-game mode, messages have two directions: inbound and outbound. Inbound messages notify the player of game events from the third party. Outbound messages are used to notify the third party of the player's choices during the game.
+In in-game mode, messages have two directions: host-to-player and player-to-host. Host-to-player messages notify a player of game events from the game host. Player-to-host messages are used to notify the game host of the player's choices during the game.
+
+## Line-by-line Mode and Batch Mode
+
+(TODO)
 
 ## Messages
 
@@ -32,11 +36,11 @@ In in-game mode, messages have two directions: inbound and outbound. Inbound mes
 
 #### Directions
 
-Outbound.
+Player-to-host.
 
 #### Scheme
 
-https://github.com/Cryolite/mjai/blob/main/schema/none.json
+[schema/none.json](schema/none.json)
 
 #### Examples
 
@@ -52,11 +56,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/none.json
 
 #### Directions
 
-Inbound.
+Host-to-player.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/hello.json
+[schema/hello.json](schema/hello.json)
 
 #### Examples
 
@@ -72,11 +76,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/hello.json
 
 #### Directions
 
-Outbound.
+Player-to-host.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/join.json
+[schema/join.json](schema/join.json)
 
 #### Examples
 
@@ -92,11 +96,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/join.json
 
 #### Directions
 
-Inbound.
+Host-to-player.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/start_game.json
+[schema/start_game.json](schema/start_game.json)
 
 #### Examples
 
@@ -112,11 +116,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/start_game.json
 
 #### Directions
 
-Inbound.
+Host-to-player.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/start_kyoku.json
+[schema/start_kyoku.json](schema/start_kyoku.json)
 
 #### Examples
 
@@ -132,11 +136,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/start_kyoku.json
 
 #### Directions
 
-Inbound.
+Host-to-player.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/tsumo.json
+[schema/tsumo.json](schema/tsumo.json)
 
 #### Examples
 
@@ -158,11 +162,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/tsumo.json
 
 #### Directions
 
-Inbound and Outbound.
+Host-to-player and player-to-host.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/dahai.json
+[schema/dahai.json](schema/dahai.json)
 
 #### Examples
 
@@ -183,11 +187,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/dahai.json
 
 #### Directions
 
-Inbound and Outbound.
+Host-to-player and player-to-host.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/chi.json
+[schema/chi.json](schema/chi.json)
 
 #### Examples
 
@@ -203,11 +207,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/chi.json
 
 #### Directions
 
-Inbound and Outbound.
+Host-to-player and player-to-host.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/pon.json
+[schema/pon.json](schema/pon.json)
 
 #### Examples
 
@@ -223,11 +227,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/pon.json
 
 #### Directions
 
-Inbound and Outbound.
+Host-to-player and player-to-host.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/daiminkan.json
+[schema/daiminkan.json](schema/daiminkan.json)
 
 #### Examples
 
@@ -243,11 +247,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/daiminkan.json
 
 #### Directions
 
-Inbound and Outbound.
+Host-to-player and player-to-host.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/kakan.json
+[schema/kakan.json](schema/kakan.json)
 
 #### Examples
 
@@ -259,11 +263,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/kakan.json
 
 #### Directions
 
-Inbound and Outbound.
+Host-to-player and player-to-host.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/ankan.json
+[schema/ankan.json](schema/ankan.json)
 
 #### Examples
 
@@ -279,11 +283,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/ankan.json
 
 #### Directions
 
-Inbound.
+Host-to-player.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/dora.json
+[schema/dora.json](schema/dora.json)
 
 #### Examples
 
@@ -299,11 +303,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/dora.json
 
 #### Directions
 
-Inbound and outbound.
+Host-to-player and player-to-host.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/reach.json
+[schema/reach.json](schema/reach.json)
 
 #### Examples
 
@@ -319,11 +323,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/reach.json
 
 #### Directions
 
-Inbound.
+Host-to-player.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/reach_accepted.json
+[reach_accepted.json](reach_accepted.json)
 
 #### Examples
 
@@ -339,7 +343,7 @@ https://github.com/Cryolite/mjai/blob/main/schema/reach_accepted.json
 
 #### Directions
 
-Inbound and outbound.
+Host-to-player and player-to-host.
 
 #### Schema
 
@@ -357,7 +361,7 @@ Inbound and outbound.
 
 #### Directions
 
-Inbound and Outbound.
+Host-to-player and player-to-host.
 
 #### Schema
 
@@ -375,11 +379,11 @@ Inbound and Outbound.
 
 #### Directions
 
-Inbound.
+Host-to-player.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/end_kyoku.json
+[schema/end_kyoku.json](schema/end_kyoku.json)
 
 #### Examples
 
@@ -395,11 +399,11 @@ https://github.com/Cryolite/mjai/blob/main/schema/end_kyoku.json
 
 #### Directions
 
-Inbound.
+Host-to-player.
 
 #### Schema
 
-https://github.com/Cryolite/mjai/blob/main/schema/end_game.json
+[schema/end_game.json](schema/end_game.json)
 
 #### Examples
 
