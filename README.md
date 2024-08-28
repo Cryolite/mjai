@@ -50,7 +50,7 @@ Player-to-host.
 {"type":"none"}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 (TODO)
 
@@ -72,7 +72,7 @@ Host-to-player.
 {"type":"hello","protocol":"mjsonp","protocol_version":1}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 - [Join](#join)
 
@@ -94,9 +94,9 @@ Player-to-host.
 {"type":"join","name":"shanten","room":"default"}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
-- [Start of Game](#start-of-game) (Inbound)
+- [Start of Game](#start-of-game)
 
 ### Start of Game
 
@@ -114,7 +114,7 @@ Host-to-player.
 {"type":"start_game","id":1,"names":["shanten","shanten","shanten","shanten"]}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 - [None](#none) (outbound)
 
@@ -134,7 +134,7 @@ Host-to-player.
 {"type":"start_kyoku","bakaze":"E","kyoku":1,"honba":0,"kyotaku":0,"oya":0,"dora_marker":"7s","tehais":[["?","?","?","?","?","?","?","?","?","?","?","?","?"],["3m","4m","3p","5pr","7p","9p","4s","4s","5sr","7s","7s","W","N"],["?","?","?","?","?","?","?","?","?","?","?","?","?"],["?","?","?","?","?","?","?","?","?","?","?","?","?"]]}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 (TODO)
 
@@ -154,7 +154,7 @@ Host-to-player.
 {"type":"tsumo","actor":0,"pai":"?"}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 - [None](#none)
 - [Dahai (Tile Discard)](#dahai-tile-discard)
@@ -180,7 +180,7 @@ Host-to-player and player-to-host.
 {"type":"dahai","actor":1,"pai":"7s","tsumogiri":false}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 - [Tsumo (Self-draw)](#tsumo-self-draw)
 - [Pon (Peng)](#pon-peng)
@@ -205,7 +205,7 @@ Host-to-player and player-to-host.
 {"type":"chi","actor":1,"target":0,"pai":"6s","consumed":["5sr","7s"]}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 (TODO)
 
@@ -225,7 +225,7 @@ Host-to-player and player-to-host.
 {"type":"pon","actor":1,"target":0,"pai":"C","consumed":["C","C"]}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 (TODO)
 
@@ -245,7 +245,7 @@ Host-to-player and player-to-host.
 {"type":"daiminkan","actor":2,"target":0,"pai":"5p","consumed":["5pr","5p","5p"]}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 (TODO)
 
@@ -265,6 +265,10 @@ Host-to-player and player-to-host.
 {"type":"kakan","actor":3,"pai":"S","consumed":["S","S","S"]}
 ```
 
+#### Next Possible Message in In-game Mode
+
+(TODO)
+
 ### Ankan (Concealed Kong)
 
 #### Directions
@@ -281,7 +285,7 @@ Host-to-player and player-to-host.
 {"type":"ankan","actor":1,"consumed":["N","N","N","N"]}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 (TODO)
 
@@ -301,7 +305,7 @@ Host-to-player.
 {"type":"dora","dora_marker":"8p"}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 (TODO)
 
@@ -321,7 +325,7 @@ Host-to-player and player-to-host.
 {"type":"reach","actor":1}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 (TODO)
 
@@ -341,7 +345,7 @@ Host-to-player.
 {"type":"reach_accepted","actor":2}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 (TODO)
 
@@ -359,7 +363,7 @@ Host-to-player and player-to-host.
 
 (TODO)
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 (TODO)
 
@@ -377,7 +381,7 @@ Host-to-player and player-to-host.
 
 (TODO)
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 (TODO)
 
@@ -397,7 +401,7 @@ Host-to-player.
 {"type":"end_kyoku"}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 (TODO)
 
@@ -417,6 +421,6 @@ Host-to-player.
 {"type":"end_game"}
 ```
 
-#### Next Possible Message
+#### Next Possible Message in In-game Mode
 
 (TODO)
