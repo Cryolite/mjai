@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "type",
+    "actor",
+    "pai",
+    "consumed"
+  ],
+  "properties": {
+    "type": {
+      "const": "kakan"
+    },
+    "actor": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "pai": {
+      "$ref": "https://raw.githubusercontent.com/Cryolite/mjai/main/schema/tile.json"
+    },
+    "consumed": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/Cryolite/mjai/main/schema/tile.json"
+      }
+    }
+  }
+}
