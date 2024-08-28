@@ -74,7 +74,7 @@ Host-to-player.
 
 #### Next Possible Message in In-game Mode
 
-- [Join](#join)
+- [Join](#join) (player-to-host)
 
 ### Join
 
@@ -96,9 +96,11 @@ Player-to-host.
 
 #### Next Possible Message in In-game Mode
 
-- [Start of Game](#start-of-game)
+- [Start of Game](#start-of-game) (host-to-player)
 
 ### Start of Game
+
+A `start_game` message is sent by the game host to notify all players of the start of the game after receiving `join` messages from all participating players. The game host SHOULD send a `start_game` message to each player after receiving `join` messages from all participating players. The game host MAY specify an integer from `0` to `4` in the `id` field to represent each player's seat order. Additionally, the game host MAY specify strings in the `names` field to identify each player. The strings listed in the `names` field SHOULD correspond to the strings in the `name` fields of the `join` messages from the players, arranged in seat order.
 
 #### Directions
 
@@ -116,7 +118,7 @@ Host-to-player.
 
 #### Next Possible Message in In-game Mode
 
-- [None](#none) (outbound)
+- [None](#none) (player-to-host)
 
 ### Start of Round
 
