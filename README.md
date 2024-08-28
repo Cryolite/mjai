@@ -102,6 +102,10 @@ Player-to-host.
 
 A `start_game` message is sent by the game host to notify all players of the start of the game after receiving `join` messages from all participating players. The game host SHOULD send a `start_game` message to each player after receiving `join` messages from all participating players. The game host MAY specify an integer from `0` to `4` in the `id` field to represent each player's seat order. Additionally, the game host MAY specify strings in the `names` field to identify each player. The strings listed in the `names` field SHOULD correspond to the strings in the `name` fields of the `join` messages from the players, arranged in seat order.
 
+A player who has received a `start_game` message SHOULD send a `none` message to the game host.
+
+After receiving `none` messages from all players in response to the `start_game` message, the game host SHOULD send a `start_kyoku` message to each player.
+
 #### Directions
 
 Host-to-player.
