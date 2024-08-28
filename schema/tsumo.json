@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "type",
+    "actor",
+    "pai"
+  ],
+  "properties": {
+    "type": {
+      "const": "tsumo"
+    },
+    "actor": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "pai": {
+      "$ref": "https://raw.githubusercontent.com/Cryolite/mjai/main/schema/tile.json"
+    }
+  }
+}
