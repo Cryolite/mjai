@@ -56,6 +56,8 @@ Player-to-host.
 
 ### Hello
 
+A `hello` message is used by the game host to notify a player of the start of communication. The game host MAY specify any protocol name in the `protocol` field. Additionally, the game host MAY specify the protocol version in the `protocol_version` field as a non-negative integer.
+
 #### Directions
 
 Host-to-player.
