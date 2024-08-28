@@ -74,9 +74,11 @@ Host-to-player.
 
 #### Next Possible Message
 
-- [Join](#join) (outbound)
+- [Join](#join)
 
 ### Join
+
+A `join` message is sent by a player who has received a `hello` message to notify the game host of the start of communication. The player MAY specify a string representing their name in the `name` field for identification purposes. Additionally, if the game host is hosting multiple games simultaneously, the player MAY specify a string in the `room` field to indicate which game they is joining.
 
 #### Directions
 
