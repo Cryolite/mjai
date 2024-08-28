@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "type",
+    "dora_marker"
+  ],
+  "properties": {
+    "type": {
+      "const": "dora"
+    },
+    "dora_marker": {
+      "$ref": "https://raw.githubusercontent.com/Cryolite/mjai/main/schema/tile.json"
+    }
+  }
+}
