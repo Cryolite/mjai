@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "type",
+    "bakaze",
+    "dora_marker",
+    "kyoku",
+    "honba",
+    "kyotaku",
+    "oya",
+    "tehais"
+  ],
+  "properties": {
+    "type": {
+      "const": "start_kyoku"
+    },
+    "bakaze": {
+      "enum": ["E", "S", "W", "N"]
+    },
+    "dora_marker": {
+      "$ref": "https://raw.githubusercontent.com/Cryolite/mjai/main/schema/tile.json"
+    },
+    "kyoku": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4
+    },
+    "honba": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "kyotaku": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "oya": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "scores": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 4,
+      "items": {
+        "type": "integer"
+      }
+    },
+    "tehais": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 4,
+      "items": {
+        "type": "array",
+        "minItems": 13,
+        "maxItems": 13,
+        "items": {
+          "$ref": "https://raw.githubusercontent.com/Cryolite/mjai/main/schema/tile.json"
+        }
+      }
+    }
+  }
+}
