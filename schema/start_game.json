@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "const": "start_game"
+    },
+    "id": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "names": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 4,
+      "items": {
+        "type": "string"
+      }
+    },
+    "seed": {}
+  }
+}
