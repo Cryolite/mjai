@@ -34,6 +34,8 @@ In in-game mode, messages have two directions: host-to-player and player-to-host
 
 ### None
 
+A `none` message is used to notify the game host from the player that they chooses to "do nothing." For example, this message is sent when a player decides to skip the option to declare chi, pon, or open kong at the appropriate timing, or to inform the game host that no action can be taken during a line-by-line mode when no valid actions are available.
+
 #### Directions
 
 Player-to-host.
