@@ -1,7 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": ["type"],
+  "required": [
+    "type"
+  ],
   "properties": {
     "type": {
       "const": "hello"
@@ -12,6 +14,9 @@
     "protocol_version": {
       "type": "integer",
       "minimum": 0
+    },
+    "can_act": {
+      "type": "boolean",
     }
   }
 }
