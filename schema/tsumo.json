@@ -13,7 +13,7 @@
     "actor": {
       "type": "integer",
       "minimum": 0,
-      "maximum": 4
+      "maximum": 3
     },
     "pai": {
       "$ref": "https://raw.githubusercontent.com/Cryolite/mjai/main/schema/tile.json"
